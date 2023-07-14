@@ -1,0 +1,27 @@
+org: dgamer007
+app: serverless-assignment
+service: serverless-assignment
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  getRecord:
+    handler: src/functions/getRecord.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /get/{id}
+
+  saveRecord:
+    handler: src/functions/saveRecord.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /save
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin

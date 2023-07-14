@@ -1,0 +1,17 @@
+{
+  "name": "serverless-assignment",
+  "version": "1.0.0",
+  "description": "Serverless Functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "5.7.0",
+    "serverless-dotenv-plugin": "6.0.0",
+    "serverless-offline": "12.0.4"
+  }
+}
